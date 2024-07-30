@@ -41,7 +41,14 @@ This project is a sales dashboard built with Django and React. It provides a way
     python manage.py migrate
     ```
 
-5. **Run the development server:**
+5. **Load data:**
+    Update file paths in `backend/api/management/commands/load_into_db.py` to point to your csv files. Please note that the project only uses the first 100 rows from the csv. More data cleaning and processing is required to use all available data.
+
+    ```sh
+    python manage.py load_into_db
+    ```
+
+6. **Run the development server:**
 
     ```sh
     python manage.py runserver
